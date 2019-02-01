@@ -39,7 +39,7 @@ describe('/POST Username Exists', () => {
 describe('/POST Validate Email', () => {
     it('it should validate email', (done) => {
         let data = {
-            email: "jedirichang@gmail.com",
+            email: "example@gmail.com",
             user_id: global.userId
 
         }
@@ -48,7 +48,7 @@ describe('/POST Validate Email', () => {
             .send(data)
             .end((err, res) => {
                 res.should.have.status(200);
-                res.body.data.should.be.eql("jedirichang@gmail.com");
+                res.body.data.should.be.eql("example@gmail.com");
                 done();
             });
     });
@@ -60,7 +60,7 @@ describe('/POST Validate Email', () => {
 describe('/POST Forget Password', () => {
     it('it should send forget password email', (done) => {
         let data = {
-            email: "jedirichang@gmail.com"
+            email: "example@gmail.com"
 
         }
         chai.request(server)

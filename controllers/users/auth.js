@@ -268,7 +268,7 @@ exports.emailVerification = async (req, res) => {
     if (userWithEmail) {
         responses.alreaedyExists(res, 'Email Already Exists');
     } else {
-        let subject = 'KSIP Email Verification';
+        let subject = ' Email Verification';
         let text = '************Disclaimer*********** \n' +
             'This is a demo email verification File. \n' +
             'Your mission, should you choose?. \n' +
@@ -314,7 +314,7 @@ exports.forgetPassword = async (req, res) => {
         email: email
     });
     if (user) {
-        let subject = 'KSIP Password Reset';
+        let subject = ' Password Reset';
         let text = 'You are receiving this because you (or someone else) have requested the reset of the password for your account.\n\n' +
             'Please click on the following link, or paste this into your browser to complete the process:\n\n' +
             '<a href="www.google.com">Click Here</a>' +
